@@ -82,7 +82,8 @@ namespace Tic_Tac_Toe
 
         private void CheckForWinner()
         {
-            int[,] combos = { 
+            // Combinations
+            int[,] c = { 
                 { 0, 1, 2 }, 
                 { 3, 4, 5 },
                 { 6, 7, 8 },
@@ -93,9 +94,9 @@ namespace Tic_Tac_Toe
                 { 2, 4, 6 }
             };
 
-            for (var i=0; i<combos.Length; i++)
+            for (var i=0; i<c.Length; i++)
             {
-                if (cellsResults[0] != MarkType.Empty && (cellsResults[0] & cellsResults[1] & cellsResults[2]) == cellsResults[0])
+                if (cellsResults[ c[i, 0] ] != MarkType.Empty && (cellsResults[c[i, 0]] & cellsResults[c[i, 1]] & cellsResults[c[i, 2]]) == cellsResults[c[i, 0]])
                 {
 
                 }
